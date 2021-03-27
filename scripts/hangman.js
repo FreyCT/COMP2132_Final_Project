@@ -5,6 +5,7 @@ let token;
 let word;
 let hint;
 let numberOfWords;
+let blanks = document.getElementById("blanks");
 
 fetch("json/words.json").then(function( response ){
     //response.ok determines if file data was received ok or not
@@ -47,17 +48,15 @@ function createGame() {
 
 //populate create guess work
 function createBlanks(chars) {
-    chars.array.forEach(element => {
-        console.log(element);
-    });
+    for(let letter in chars) {
+        let element = document.createElement("h3");
+        element.textContent = "_";
+        element.setAttribute("id", letter)
+        element.setAttribute("name", letter);
+        blanks.appendChild(element);
+        console.log(letter);
+    }
 }
-
-let letter = 'A'
-$("#word").append(`<h3>${letter}<h3>`)
-letter = 'P'
-$("#word").append(`<h3>${letter}<h3>`)
-
-
 
 //Create and add button
 function addButton(letter) {
