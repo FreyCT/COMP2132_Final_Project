@@ -1,16 +1,17 @@
-section {
+div {
   color: white;
   margin: 5px;
   border: 1px solid grey;
   text-align: center;
 }
 
-.stage {
-  height: 500px;
+#hangman-image {
+  height: 650px;
 }
 
-#hangman-image {
-  height: 100%;
+button {
+  color: white;
+  background-color: black;
 }
 
 #overall-dice-game {
@@ -20,7 +21,7 @@ section {
   display: grid;
   grid-template-rows: minmax(360px, auto) minmax(10px, auto);
   grid-template-columns: 1fr, 1fr, 1fr;
-  grid-template-areas: "player-dice computer-dice score-tally" "roll-dice roll-dice total-score";
+  grid-template-areas: "player-dice computer-dice score-tally" "roll-dice roll-dice total-score";
   grid-gap: 8px;
 }
 

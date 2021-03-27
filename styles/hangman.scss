@@ -1,18 +1,19 @@
 
-section{
+div{
 	color:white;
 	margin: 5px;
 	border: 1px solid grey;
 	text-align: center;
 }
 
-.stage{
-	height: 500px;
-}
 #hangman-image{
-	height: 100%;
+	height: 650px;
 }
 
+button {
+	color: white;
+	background-color:black;
+}
 
 #overall-dice-game{
 	border: 1px solid grey;
