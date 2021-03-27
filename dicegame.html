@@ -19,15 +19,78 @@
                 </div>	
                 
                 <div id="overall-dice-game">
-                    <section class="player-dice box"><p>Player Dice</p></section>
-                    <section class="computer-dice box"><p>Computer Dice</p></section>
-                    <section class="score-tally box"><p>Score Tally</p></section>
+                    <section class="player-dice box">
+                        <p id="player-dice-title">Player Dice</p>
+                        <img src="images/dice/dice-1.png" class="dice-image" id="player-dice-image">
+                    </section>
+                    <section class="computer-dice box">
+                        <p id="computer-dice-title">Computer Dice</p>
+                        <img src="images/dice/dice-1.png" class="dice-image">
+                    </section>
+                    <section class="score-tally box">
+                        <p>Score Tally</p>
+                        <table>
+                            <tr>
+                                <th>round</th>
+                                <th>Player</th>
+                                <th>Computer</th>
+                            </tr>
+                            <tr>
+                                <td>round 1-1</td>
+                                <td>points</td>
+                                <td>points</td>
+                            </tr>
+                            <tr>
+                                <td>round 1-2</td>
+                                <td>points</td>
+                                <td>points</td>
+                            </tr>
+                            <tr>
+                                <td>round 1 total</td>
+                                <td>points</td>
+                                <td>points</td>
+                            </tr>
+                            <tr>
+                                <td>round 2-1</td>
+                                <td>points</td>
+                                <td>points</td>
+                            </tr>
+                            <tr>
+                                <td>round 2-2</td>
+                                <td>points</td>
+                                <td>points</td>
+                            </tr>
+                            <tr>
+                                <td>round 2 total</td>
+                                <td>points</td>
+                                <td>points</td>
+                            </tr>
+                            <tr>
+                                <td>round 3-1</td>
+                                <td>points</td>
+                                <td>points</td>
+                            </tr>
+                            <tr>
+                                <td>round 3-2</td>
+                                <td>points</td>
+                                <td>points</td>
+                            </tr>
+                            <tr>
+                                <td>round 3 total</td>
+                                <td>points</td>
+                                <td>points</td>
+                            </tr>
+
+                            
+                        </table>
+                    </section>
                     <section class="total-score box"><p>Total Score</p></section>
-                    <section class="roll-dice box"><p>Roll Dice</p></li></section>
+                    <section class="roll-dice box" id="btn-roll"><p>Roll Dice</p></li></section>
                 </div>
 			</main>
 			<footer>
 			</footer>	
-		</div>
+        </div>
+        <script src="scripts/dicegame.js"></script>
 	</body>
 </html>

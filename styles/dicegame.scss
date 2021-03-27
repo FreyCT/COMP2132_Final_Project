@@ -1,29 +1,70 @@
 
+:root{
+	--primary-color: #191B1C;
+	--secondary-color: white;
+}
+
+
+
 #game a{
 	padding: 180px 150px 180px;
 	font-size: 80px;
 }
 
+section{
+		p{
+			padding: 15px;
+			margin: 0px;
+		}
+		#player-dice-title, #computer-dice-title{
+			background-color: var(--primary-color);
+		}
+}
+
+table{
+	width: 95%;
+	margin: auto;
+	th, td{
+	border: 1px solid grey;
+	padding: 5px;
+	margin: auto;
+	}
+}
+
 
 #overall-dice-game{
 	border: 1px solid grey;
+	text-align: center;
 	max-width: 90%;
 	margin: auto;
 	display: grid;
 	grid-template-rows: minmax(360px, auto) minmax(10px, auto);
-	grid-template-columns: 1fr, 1fr, 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas:
 	"player-dice computer-dice score-tally"
 	"roll-dice roll-dice total-score";
 	grid-gap: 8px;
+	.dice-image{
+		width: 250px;
+		padding-top: 30px;
+	}
 	.box{
 		border: 1px solid grey;
 		margin: 5px;
 	}
+	.player-dice{ 
+		background-color: var(--secondary-color);
+		grid-area: player-dice; 
+	}
+	.computer-dice{ 
+		background-color: var(--secondary-color);
+		grid-area: computer-dice; 
+	}
+	.score-tally{ grid-area: score-tally; }
+	.total-score{ grid-area: total-score; }
+	.roll-dice{ grid-area: roll-dice; }
+	.roll-dice:hover{
+		background-color: var(--secondary-color);
+		color: black;
+	}
 }
-
-.player-dice{ grid-area: player-dice; }
-.computer-dice{ grid-area: computer-dice; }
-.score-tally{ grid-area: score-tally; }
-.total-score{ grid-area: total-score; }
-.roll-dice{ grid-area: roll-dice; }
