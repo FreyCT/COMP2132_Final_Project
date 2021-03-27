@@ -53,10 +53,10 @@ function createBlanks(chars) {
     for(let letter in chars) {
         let element = document.createElement("h3");
         element.innerHTML = "_";
-        element.setAttribute("id", chars.charat(letter))
-        element.setAttribute("name", chars.charat(letter));
+        element.setAttribute("id", chars[letter])
+        element.setAttribute("name", chars[letter]);
         blanks.appendChild(element);
-        console.log(chars.charat(letter));
+        console.log(chars[letter]);
     }
 }
 
