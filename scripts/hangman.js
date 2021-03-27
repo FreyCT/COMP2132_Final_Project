@@ -14,7 +14,7 @@ fetch("json/words.json").then(function( response ){
 })
 .then(function(data){                 
     words = data
-    numberOfWords = words.length;0=
+    numberOfWords = words.length;
 })
 .catch(function(){
     console.log("fetch error");
