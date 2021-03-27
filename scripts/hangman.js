@@ -24,7 +24,7 @@ function addButton(letter) {
 
 let letter = 'A'
 $("#word").append(`<h3>${letter}<h3>`)
-letter = '_'
+letter = 'P'
 $("#word").append(`<h3>${letter}<h3>`)
 
 fetch("json/words.json")
