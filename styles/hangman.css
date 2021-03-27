@@ -12,7 +12,8 @@ button {
   color: white;
   margin: 5px;
   background-color: black;
-  width: 50px;
+  width: 30px;
+  border-radius: 15%;
 }
 
 .stage {
