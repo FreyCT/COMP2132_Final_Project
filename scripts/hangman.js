@@ -28,6 +28,8 @@ for (let i = 1; i <= 26; i++) {
     addButton(String.fromCharCode(64 + i))
 }
 
+createGame();
+
 //Create Game
 function createGame() {
     token = getRandomInt(numberOfWords);
@@ -51,10 +53,10 @@ function createBlanks(chars) {
     for(let letter in chars) {
         let element = document.createElement("h3");
         element.innerText = "_";
-        element.setAttribute("id", letter)
-        element.setAttribute("name", letter);
+        element.setAttribute("id", chars.charat(letter))
+        element.setAttribute("name", chars.charat(letter));
         blanks.appendChild(element);
-        console.log(letter);
+        console.log(chars.charat(letter));
     }
 }
 
