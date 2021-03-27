@@ -1,6 +1,9 @@
 document.body.style.backgroundImage = "url('images/hangman/black.jpg')"; 
 
 let words;
+let token;
+let word;
+let hint;
 let numberOfWords;
 
 fetch("json/words.json").then(function( response ){
@@ -24,6 +27,39 @@ for (let i = 1; i <= 26; i++) {
     addButton(String.fromCharCode(64 + i))
 }
 
+//Create Game
+function createGame() {
+    token = getRandomInt(numberOfWords);
+    word = words[token]["word"];
+    hint = words[token]["hint"];
+
+    //Call function to display spaces for word
+    createBlanks(word);
+    //Call function to display hint for word
+}
+
+//Create guess tracker
+
+//Create hang animation
+
+//Create Hint
+
+
+//populate create guess work
+function createBlanks(chars) {
+    chars.array.forEach(element => {
+        console.log(element);
+    });
+}
+
+let letter = 'A'
+$("#word").append(`<h3>${letter}<h3>`)
+letter = 'P'
+$("#word").append(`<h3>${letter}<h3>`)
+
+
+
+//Create and add button
 function addButton(letter) {
     //Create an input type dynamically.
     let element = document.createElement("button");
@@ -40,17 +76,6 @@ function addButton(letter) {
     buttons.appendChild(element);
 }
 
-//Create guess tracker
-
-//Create hang animation
-
-//Create game reset
-
-//Create Hint
-
-
-//populate word with random word from words.
-let letter = 'A'
-$("#word").append(`<h3>${letter}<h3>`)
-letter = 'P'
-$("#word").append(`<h3>${letter}<h3>`)
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
