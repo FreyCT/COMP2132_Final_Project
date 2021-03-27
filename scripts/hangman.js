@@ -40,6 +40,15 @@ function addButton(letter) {
     buttons.appendChild(element);
 }
 
+//Create guess tracker
+
+//Create hang animation
+
+//Create game reset
+
+//Create Hint
+
+
 //populate word with random word from words.
 let letter = 'A'
 $("#word").append(`<h3>${letter}<h3>`)
