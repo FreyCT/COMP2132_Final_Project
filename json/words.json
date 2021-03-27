@@ -75,7 +75,7 @@
     {"word" : "iterate"   	   ,  "hint" : "tb"},
     {"word" : "pixels" 	       ,  "hint" : "tb"},
     {"word" : "software"  	   ,  "hint" : "is a collection of data or computer instructions that tell the computer how to work. This is in contrast to physical hardware, from which the system is built and actually performs the work. See more here in Wikipedia"},
-    {"word" : "python" 	       ,  "hint" : "an interpreted, high-level, general-purpose programming language. and has a design philosophy that emphasizes code readability, notably using significant whitespace. Python features a dynamic type system and automatic memory management. It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library."},
+    {"word" : "python" 	       ,  "hint" : "A snake with a large and comprehensive standard library."},
     {"word" : "assembler" 	   ,  "hint" : "a low-level mnemonic programming language in 1-1 correspondence with a computer's instructions"},
     {"word" : "argument" 	   ,  "hint" : "in computer programming, a value provided to a function when the function is called; this value is assigned to the corresponding parameter in the function"},
     {"word" : "graphics" 	   ,  "hint" : "(computer) are pictures and films created using computers. Usually, the term refers to computer-generated image data created with the help of specialized graphical hardware and software. It is a vast and recently developed area of computer scienceSee more here in Wikipedia"},
