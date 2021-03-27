@@ -1,1 +1,1 @@
-document.body.style.backgroundImage = "url('images/hangman/hangman.png')"; 
+document.body.style.backgroundImage = "url('images/hangman/black.jpg')"; 
