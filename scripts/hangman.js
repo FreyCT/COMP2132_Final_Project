@@ -45,6 +45,9 @@ function createGame() {
 //Create hang animation
 
 //Create Hint
+function createHint() {
+    document.getElementById("hint").innerHTML = `<p>${hint}</p>`;
+}
 
 
 //populate create guess work
