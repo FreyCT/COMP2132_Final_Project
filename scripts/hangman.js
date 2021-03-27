@@ -1,7 +1,6 @@
 document.body.style.backgroundImage = "url('images/hangman/black.jpg')"; 
 
 for (let i = 1; i <= 26; i++) {
-
     addButton(String.fromCharCode(64 + i))
 }
 
@@ -14,25 +13,17 @@ function addButton(letter) {
     element.setAttribute("value", letter);
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
-    element.setAttribute("class", "btn btn-secondary btn-lg")
+    // element.setAttribute("class", "btn btn-secondary btn-lg")
     element.setAttribute("onclick", "console.log(`Button ${this.textContent} was clicked.`)");
 
     let buttons = document.getElementById("alphabet");
-    //Append the element in page (in span).  
+    //Append the element in page (in span).
     buttons.appendChild(element);
 }
 
-let letter = 'A'
-$("#word").append(`<h3>${letter}<h3>`)
-letter = 'P'
-$("#word").append(`<h3>${letter}<h3>`)
-
 let words = "";
 
-fetch("json/words.json")
-//pass a parameter to the function
-//and it will be available as a Response object
-.then(function( response ){
+words = fetch("json/words.json").then(function( response ){
     //response.ok determines if file data was received ok or not
     console.log(`Fetch response received. response.ok is ${response.ok}`);
     if(response.ok){
@@ -41,13 +32,19 @@ fetch("json/words.json")
         return response.json();
     }
 })
-.then(function(data){                 
-    words = data;
-    console.log(data);
-    
-    // out02.innerHTML += `<p>JSON data accessed. Username: ${data.username} Age: ${data.age} Status: ${data.remote}</p>`;       
-     
-})
-.catch(function(){
-    console.log("Catch fetch error");
-});
+// .then(function(data){                 
+
+// })
+// .catch(function(){
+//     console.log("fetch error");
+// });
+
+
+
+let letter = 'A'
+$("#word").append(`<h3>${letter}<h3>`)
+letter = 'P'
+$("#word").append(`<h3>${letter}<h3>`)
+
+
+
