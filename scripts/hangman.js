@@ -28,8 +28,6 @@ for (let i = 1; i <= 26; i++) {
     addButton(String.fromCharCode(64 + i))
 }
 
-createGame();
-
 //Create Game
 function createGame() {
     token = getRandomInt(numberOfWords);
@@ -79,4 +77,6 @@ function addButton(letter) {
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
-  }
+}
+
+createGame();
