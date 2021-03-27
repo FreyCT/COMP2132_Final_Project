@@ -52,7 +52,7 @@ function createGame() {
 function createBlanks(chars) {
     for(let letter in chars) {
         let element = document.createElement("h3");
-        element.innerText = "_";
+        element.innerHTML = "_";
         element.setAttribute("id", chars.charat(letter))
         element.setAttribute("name", chars.charat(letter));
         blanks.appendChild(element);
