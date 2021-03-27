@@ -21,3 +21,17 @@ function addButton(letter) {
     //Append the element in page (in span).  
     buttons.appendChild(element);
 }
+
+// $.getJSON( "json/words.json", function( data ) {
+//     console.log(data);
+// })
+
+if(localStorage) {
+        
+    // Retrieve data
+    const retrievedJSON  = JSON.parse(localStorage.getItem("user_data")); 
+    //access JSON data
+    console.log(retrievedJSON);
+} else {
+    alert("Sorry, your browser do not support local storage.");
+}
