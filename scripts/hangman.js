@@ -35,3 +35,8 @@ if(localStorage) {
 } else {
     alert("Sorry, your browser do not support local storage.");
 }
+
+let letter = 'A'
+$("#word").append(`<h3>${letter}<h3>`)
+letter = '_'
+$("#word").append(`<h3>${letter}<h3>`)

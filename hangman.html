@@ -7,24 +7,30 @@
 <link rel="stylesheet" href="styles/hangman.min.css">
 </head>
 <body>
-<header>
-    <div class="banner">
-		<!-- <img src="images/banner-image.jpg" alt="Road winding through forest"> -->
-		<h2>Welcome</h2>
-	</div>		
-</header>
+    <header>
+        <div class="banner">
+            <!-- <img src="images/banner-image.jpg" alt="Road winding through forest"> -->
+            <h2>Welcome</h2>
+        </div>		
+    </header>
 
 
-<main>
-    <div class="stage">
-        <img src="images/hangman/hangman.png" id="hangman-image">
-    </div>
-	<div class="alphabet" id="alphabet"></div>
-</main>
+    <main>
+        <div class="stage">
+            <img src="images/hangman/hangman.png" id="hangman-image">
+            <div id="word">
+                <h3>_</h3>
+                <h3>_</h3>
+                <h3>H</h3>
+            </div>
+        </div>
+        <div class="alphabet" id="alphabet"></div>
+    </main>
 
 
-<footer>
-</footer>
-<script src="scripts/hangman.js" defer></script>	
-</body>
+    <footer>
+    </footer>
+    <script src="scripts/hangman.js" defer></script>	
+    <script src="scripts/jquery-3.4.1.min.js"></script>
+    </body>
 </html>
