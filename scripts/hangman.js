@@ -21,3 +21,9 @@ function addButton(letter) {
     //Append the element in page (in span).  
     buttons.appendChild(element);
 }
+
+
+let letter = 'A'
+$("#word").append(`<h3>${letter}<h3>`)
+letter = '_'
+$("#word").append(`<h3>${letter}<h3>`)

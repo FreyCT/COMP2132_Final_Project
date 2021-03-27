@@ -13,17 +13,18 @@ computer.style.opacity = 0
 const rollDice = document.getElementById('btn-roll')
 
 
-
-let imageNumber = 1;
-const interval = 100;
-maxImageNumber = 6;
 let imagehandler;
+let imageNumber = 1;
+let rollNumber = 0
+maxImageNumber = 6;
 
+const interval = 100;
 
 
 rollDice.addEventListener('click', function(){
-    
     player.style.opacity = 1
+    rollNumber ++
+
     imagehandler = setInterval(() => {
         imageNumber ++;
         player.src = `images/dice/dice-${imageNumber%maxImageNumber + 1}.png`;
