@@ -22,21 +22,30 @@ function addButton(letter) {
     buttons.appendChild(element);
 }
 
-// $.getJSON( "json/words.json", function( data ) {
-//     console.log(data);
-// })
-
-if(localStorage) {
-        
-    // Retrieve data
-    const retrievedJSON  = JSON.parse(localStorage.getItem("user_data")); 
-    //access JSON data
-    console.log(retrievedJSON);
-} else {
-    alert("Sorry, your browser do not support local storage.");
-}
-
 let letter = 'A'
 $("#word").append(`<h3>${letter}<h3>`)
 letter = '_'
 $("#word").append(`<h3>${letter}<h3>`)
+
+fetch("json/words.json")
+//pass a parameter to the function
+//and it will be available as a Response object
+.then(function( response ){
+    //response.ok determines if file data was received ok or not
+    console.log(`Fetch response received. response.ok is ${response.ok}`);
+    if(response.ok){
+        console.log(`Response is ok, proceed to access data`);
+        //forward the data to the next .then() stage
+        return response.json();
+    }
+})
+.then(function(data){                 
+    
+    console.log(data);
+    
+    // out02.innerHTML += `<p>JSON data accessed. Username: ${data.username} Age: ${data.age} Status: ${data.remote}</p>`;       
+     
+})
+.catch(function(){
+    console.log("Catch fetch error");
+});
