@@ -21,9 +21,10 @@ function addButton(letter) {
     buttons.appendChild(element);
 }
 
-let words = "";
+let words;
+let numberOfWords;
 
-words = fetch("json/words.json").then(function( response ){
+fetch("json/words.json").then(function( response ){
     //response.ok determines if file data was received ok or not
     console.log(`Fetch response received. response.ok is ${response.ok}`);
     if(response.ok){
@@ -32,12 +33,13 @@ words = fetch("json/words.json").then(function( response ){
         return response.json();
     }
 })
-// .then(function(data){                 
-
-// })
-// .catch(function(){
-//     console.log("fetch error");
-// });
+.then(function(data){                 
+    words = data
+    numberOfWords = words.length;
+})
+.catch(function(){
+    console.log("fetch error");
+});
 
 
 
