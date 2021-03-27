@@ -27,7 +27,7 @@
     {"word" : "syntax" 	       ,  "hint" : "refers to the spelling and grammar of a programming language. Computers are inflexible machines that understand what you type only if you type it in the exact form that the computer expects. The expected form is called the syntax."},
     {"word" : "binary" 	       ,  "hint" : "numbers expressed in the base of two, using 0 and 1 only;"},
     {"word" : "ternary" 	   ,  "hint" : "numbers expressed in the base of three, instead of 10, using 0, 1 and 2 only;"},
-    {"word" : "octal" 	       ,  "hint" : "numbers expressed in the base of eight, instead of 10, using 0, 1, 2,3 4, 5, 6 and 7 only;"},
+    {"word" : "octal" 	       ,  "hint" : "A numeral system only an octopus could love"},
     {"word" : "decimal" 	   ,  "hint" : "numbers expressed in the base of 10, using 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9 only;"},
     {"word" : "hexadecimal"    ,  "hint" : "numbers expressed in the base of sixteen, instead of 10, using 0, 1, 2,3 4, 5, 6, 7, 8, 9, a, b, c, d, e ond f"},
     {"word" : "debug" 	       ,  "hint" : "find and eliminate errors in a computer program whether they are syntax errors like spelling mistakes in the writing of the program, or logical errors of faulty thinking discovered during run-time."},
