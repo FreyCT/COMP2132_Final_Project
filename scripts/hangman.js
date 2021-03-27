@@ -27,6 +27,8 @@ $("#word").append(`<h3>${letter}<h3>`)
 letter = 'P'
 $("#word").append(`<h3>${letter}<h3>`)
 
+let words = "";
+
 fetch("json/words.json")
 //pass a parameter to the function
 //and it will be available as a Response object
@@ -40,7 +42,7 @@ fetch("json/words.json")
     }
 })
 .then(function(data){                 
-    
+    words = data;
     console.log(data);
     
     // out02.innerHTML += `<p>JSON data accessed. Username: ${data.username} Age: ${data.age} Status: ${data.remote}</p>`;       
