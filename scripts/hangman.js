@@ -65,7 +65,6 @@ function guess(letter) {
             guessedWrong = false;
         }
     }
-    console.log(correctGuesses == wordLength);
     if(correctGuesses == wordLength) gameOver("YOU WIN");
     if(guessedWrong) hangman();
 }
