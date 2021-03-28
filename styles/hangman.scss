@@ -1,31 +1,59 @@
+:root{
+	--primary-color: white;
+	--secondary-color: black;
+	--tertiary-color: pink;
+}
+
+@mixin borderSet($radius, $style, $color, $background-color) {
+	border-radius: $radius;
+	border-style: $style;
+	border-color: $color;
+	background-color: $background-color;
+}
 
 div{
-	color:white;
+	color:var(--primary-color);
 	margin: 5px;
-	border: 1px solid grey;
 	text-align: center;
+
+	button:hover {
+		@include borderSet(15px, solid, var(--tertiary-color), dimgrey);
+	}
+}
+
+button {
+	color: var(--primary-color);
+	margin: 5px;
+	width: 30px;
+	height: 30px;
+	@include borderSet(15px, groove, var(--primary-color), var(--secondary-color));
+}
+
+h3{
+	margin: 10px;
 }
 
 #hangman-image{
 	height: 650px;
-}
-
-button {
-	color: white;
-	background-color:black;
+	@include borderSet(10px, groove, var(--tertiary-color), var(--secondary-color));
 }
 
 .stage{
 	position: relative;
 }
 
-h3{
-	margin: 15px;
+#hint {
+	p {
+		strong:hover{
+			color: var(--tertiary-color);
+			cursor: pointer;
+		}
+	}
 }
 
-#word{
+#wordDisplay{
 	position: absolute;
-	top: 83%;
+	top: 90%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 60px;
