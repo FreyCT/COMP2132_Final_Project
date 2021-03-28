@@ -44,6 +44,7 @@ function createGame() {
     guessed.innerHTML = `<p><strong>Guesses: </strong>0/7</p>`;
     buttons.innerHTML = "";
     correctGuesses = 0;
+    incorrectGuesses = 0;
 
     for (let i = 1; i <= 26; i++) {
         addButton(String.fromCharCode(64 + i));
