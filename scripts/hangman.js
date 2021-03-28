@@ -24,7 +24,7 @@ fetch("json/words.json").then(function( response ){
 .then(function(data){                 
     words = data;
     numberOfWords = words.length;
-}).then(createGame())
+})
 .catch(function(){
     console.log("fetch error");
 });
@@ -106,3 +106,5 @@ function addButton(letter) {
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
+
+createGame();
