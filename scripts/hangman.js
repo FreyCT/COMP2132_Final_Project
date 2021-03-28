@@ -30,17 +30,19 @@ fetch("json/words.json").then(function( response ){
     console.log("fetch error");
 });
 
-for (let i = 1; i <= 26; i++) {
-    addButton(String.fromCharCode(64 + i))
-}
-
 //Create Game
 function createGame() {
-    document.getElementById("hangman-image").setAttribute("src", "images/hangman/hangman.png"); 
+    hangmanImage.src = "images/hangman/hangman.png";
     token = getRandomInt(numberOfWords);
     word = words[token]["word"].toUpperCase();
     hint = words[token]["hint"];
 
+    buttons.innerHTML = "";
+
+    for (let i = 1; i <= 26; i++) {
+        addButton(String.fromCharCode(64 + i))
+    }
+    
     //Call function to display spaces for word
     createBlanks();
     //Call function to display hint for word
@@ -66,7 +68,6 @@ function guess(letter) {
 function hangman() {
     guesses++;
     clearInterval(imagehandler);
-    document.getElementById("hangman-image").src = "images/hangman/hangman.png"
     imagehandler = setInterval(() => {
         imageNumber++;
         hangmanImage.src = `images/hangman/hangman-0${guesses}-${imageNumber%3}.png`;
@@ -101,7 +102,7 @@ function addButton(letter) {
     element.setAttribute("value", letter);
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
-    element.setAttribute("onclick", "guess(this.textContent)");
+    element.setAttribute("onclick", "guess(this.textContent); console.log(this.setAttribute('disabled', 'disabled'))");
     let buttons = document.getElementById("alphabet");
     //Append the element in page (in span).
     buttons.appendChild(element);
