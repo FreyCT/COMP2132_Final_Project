@@ -1,6 +1,7 @@
 :root {
   --primary-color: #191B1C;
   --secondary-color: white;
+  --tertiary-color: grey;
 }
 
 #game a {
@@ -23,20 +24,24 @@ table {
 }
 
 table th, table td {
-  border: 1px solid grey;
+  border: 1px solid var(--tertiary-color);
   padding: 5px;
   margin: auto;
 }
 
+table .blank {
+  border: 1px solid transparent;
+}
+
 #overall-dice-game {
-  border: 1px solid grey;
+  border: 1px solid var(--tertiary-color);
   text-align: center;
   max-width: 90%;
   margin: auto;
   display: grid;
   grid-template-rows: minmax(360px, auto) minmax(10px, auto);
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "player-dice computer-dice score-tally" "roll-dice roll-dice total-score";
+  grid-template-areas: "player-dice computer-dice score-tally" "roll-dice roll-dice score-tally";
   grid-gap: 8px;
 }
 
@@ -46,7 +51,7 @@ table th, table td {
 }
 
 #overall-dice-game .box {
-  border: 1px solid grey;
+  border: 1px solid var(--tertiary-color);
   margin: 5px;
 }
 
@@ -64,15 +69,11 @@ table th, table td {
   grid-area: score-tally;
 }
 
-#overall-dice-game .total-score {
-  grid-area: total-score;
-}
-
 #overall-dice-game .roll-dice {
   grid-area: roll-dice;
 }
 
 #overall-dice-game .roll-dice:hover {
   background-color: var(--secondary-color);
-  color: black;
+  color: var(--primary-color);
 }
