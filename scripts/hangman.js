@@ -10,6 +10,7 @@ let imageNumber = 0;
 let guesses = 0;
 let hangmanImage = document.getElementById("hangman-image");
 let blanks = document.getElementById("blanks");
+let buttons = document.getElementById("alphabet");
 
 
 fetch("json/words.json").then(function( response ){
@@ -24,6 +25,7 @@ fetch("json/words.json").then(function( response ){
 .then(function(data){                 
     words = data;
     numberOfWords = words.length;
+    createGame();
 })
 .catch(function(){
     console.log("fetch error");
@@ -98,7 +100,6 @@ function addButton(letter) {
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
     element.setAttribute("onclick", "guess(this.textContent); console.log(this.setAttribute('disabled', 'disabled'))");
-    let buttons = document.getElementById("alphabet");
     //Append the element in page (in span).
     buttons.appendChild(element);
 }
@@ -106,5 +107,3 @@ function addButton(letter) {
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
-
-createGame();
