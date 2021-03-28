@@ -2,10 +2,11 @@ document.body.style.backgroundImage = "url('images/hangman/black.jpg')";
 
 let words;
 let token;
-let word;
+let word = "AT";
 let hint;
 let numberOfWords;
 let blanks = document.getElementById("blanks");
+
 
 fetch("json/words.json").then(function( response ){
     //response.ok determines if file data was received ok or not
@@ -32,33 +33,44 @@ for (let i = 1; i <= 26; i++) {
 //Create Game
 function createGame() {
     token = getRandomInt(numberOfWords);
-    word = words[token]["word"];
+    word = words[token]["word"].toUpperCase;
     hint = words[token]["hint"];
 
     //Call function to display spaces for word
-    createBlanks(word);
+    createBlanks();
     //Call function to display hint for word
 }
 
 //Create guess tracker
+function guess(letter) {
+    let flag = true;
+    console.log(blanks.childElementCount);
+    for(let i in word) {
+        console.log(`hello ${i} ${word} ${word[i]} ${letter}`);
+        if(word[i] == letter) {
+            console.log("matched")
+            document.getElementById(`B${i}`).innerHTML = letter;
+            flag = false;
+        }
+    }
+}
 
 //Create hang animation
 
 //Create Hint
 function createHint() {
-    document.getElementById("hint").innerHTML = `<p>${hint}</p>`;
+    document.getElementById("hint").innerHTML = `<p>Hint: ${hint}</p>`;
 }
 
-
 //populate create guess work
-function createBlanks(chars) {
-    for(let letter in chars) {
+function createBlanks() {
+    for(let i in word) {
         let element = document.createElement("h3");
-        element.innerHTML = (chars[letter] != "-") ? "_" : "-";
-        element.setAttribute("id", chars[letter])
-        element.setAttribute("name", chars[letter]);
+        element.innerHTML = (word[i] != "-") ? "_" : "-";
+        element.setAttribute("id", `B${i}`);
+        element.setAttribute("name", word[i]);
         blanks.appendChild(element);
-        console.log(chars[letter]);
+        console.log(word[i]);
     }
 }
 
@@ -67,13 +79,12 @@ function addButton(letter) {
     //Create an input type dynamically.
     let element = document.createElement("button");
     //Assign different attributes to the element.
-    element.textContent = letter
-    element.setAttribute("id", letter)
+    element.textContent = letter;
+    element.setAttribute("id", letter);
     element.setAttribute("value", letter);
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
-    // element.setAttribute("class", "btn btn-secondary btn-lg")
-    element.setAttribute("onclick", "console.log(`Button ${this.textContent} was clicked.`)");
+    element.setAttribute("onclick", "guess(this.textContent)");
     let buttons = document.getElementById("alphabet");
     //Append the element in page (in span).
     buttons.appendChild(element);

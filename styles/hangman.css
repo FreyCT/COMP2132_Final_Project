@@ -1,7 +1,6 @@
 div {
   color: white;
   margin: 5px;
-  border: 1px solid grey;
   text-align: center;
 }
 
@@ -28,7 +27,7 @@ h3 {
 
 #blanks {
   position: absolute;
-  top: 83%;
+  top: 90%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 60px;
