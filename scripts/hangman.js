@@ -77,7 +77,6 @@ function hangman() {
         imagehandler = setInterval(() => {
             imageNumber++;
             hangmanImage.src = `images/hangman/hangman-0${guesses}-${imageNumber%3}.png`;
-            
         }, 150);
     }
 }
@@ -86,6 +85,8 @@ function gameOver() {
     clearInterval(imagehandler);
     document.getElementById("hint").innerHTML = "";
     guessed.innerHTML = "<p><strong>GAME OVER</strong></p>"
+    document.getElementById("hint").innerHTML = `<P onclick = "createGame()"><strong>PLAY AGAIN</strong></p>`;
+    buttons.innerHTML = "";
 }
 
 //Create Hint
