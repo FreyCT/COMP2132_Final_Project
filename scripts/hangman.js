@@ -76,7 +76,7 @@ function hangman() {
         guessed.innerHTML = `<p><strong>Guesses: </strong>${guesses}/7</p>`;
         if (guesses == 7) {
             setTimeout(() => {
-                gameOver();
+                gameOver("YOU LOSE");
             }, 2000);
         }
         imagehandler = setInterval(() => {
