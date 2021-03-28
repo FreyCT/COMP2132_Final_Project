@@ -1,7 +1,6 @@
 div {
   color: white;
   margin: 5px;
-  border: 1px solid grey;
   text-align: center;
 }
 
@@ -22,6 +21,8 @@ h3 {
 #hangman-image {
   height: 650px;
   border-radius: 10px;
+  border-style: solid;
+  border-color: #436350;
 }
 
 .stage {
