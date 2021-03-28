@@ -33,7 +33,7 @@
     {"word" : "debug" 	       ,  "hint" : "find and eliminate errors in a computer program whether they are syntax errors like spelling mistakes in the writing of the program, or logical errors of faulty thinking discovered during run-time."},
     {"word" : "source" 	       ,  "hint" : "(code) a program written in a high-level language before being compiled"},
     {"word" : "equation" 	   ,  "hint" : "in mathematics, a statement that the values of two mathematical expressions, the left hand side and the right hand side are equal; equation is a word with all the vowels."},
-    {"word" : "rhythm" 	       ,  "hint" : "(from Greek ῥυθμός, rhythmos, 'any regular recurring motion, symmetry' generally means a 'movement marked by the regulated succession of strong and weak elements, or of opposite or different conditions. It's also a 6 letter word without a vowel!"},
+    {"word" : "rhythm" 	       ,  "hint" : "Movement marked by the regulated succession of strong and weak elements, or of opposite or different conditions. It's also a 6 letter word without a vowel!"},
     {"word" : "matching" 	   ,  "hint" : "patterns, in computer science, pattern matching is the act of checking a given sequence of tokens for the presence of the constituents of some pattern"},
     {"word" : "symmetry" 	   ,  "hint" : "(from Greek συμμετρία, symmetria) in nature, science, mathematics, agreement in dimensions, due proportion, arrangement. In everyday language refers to a sense of harmonious and beautiful proportion and balance."},
     {"word" : "cipher" 	       ,  "hint" : "tb"},

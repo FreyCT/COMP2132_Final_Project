@@ -66,11 +66,14 @@ function guess(letter) {
 function hangman() {
     guesses++;
     clearInterval(imagehandler);
-    imagehandler = setInterval(() => {
-        imageNumber++;
-        hangmanImage.src = `images/hangman/hangman-0${guesses}-${imageNumber%3}.png`;
-        
-    }, 150);
+    if (guesses < 8) {
+        document.getElementById("id").innerHTML = `<p><strong>Guesses: </strong>${guesses}</p>`;
+        imagehandler = setInterval(() => {
+            imageNumber++;
+            hangmanImage.src = `images/hangman/hangman-0${guesses}-${imageNumber%3}.png`;
+            
+        }, 150);
+    }
 }
 
 //Create Hint
