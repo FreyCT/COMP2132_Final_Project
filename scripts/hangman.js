@@ -5,6 +5,10 @@ let token;
 let word;
 let hint;
 let numberOfWords;
+let imagehandler;
+let imageNumber = 0;
+let guesses = 0;
+let hangmanImage = document.getElementById("hangman-image");
 let blanks = document.getElementById("blanks");
 
 
@@ -32,6 +36,7 @@ for (let i = 1; i <= 26; i++) {
 
 //Create Game
 function createGame() {
+    document.getElementById("hangman-image").setAttribute("src", "images/hangman/hangman.png"); 
     token = getRandomInt(numberOfWords);
     word = words[token]["word"].toUpperCase();
     hint = words[token]["hint"];
@@ -59,7 +64,14 @@ function guess(letter) {
 
 //Create hang animation
 function hangman() {
-    
+    guesses++;
+    clearInterval(imagehandler);
+    document.getElementById("hangman-image").src = "images/hangman/hangman.png"
+    imagehandler = setInterval(() => {
+        imageNumber++;
+        hangmanImage.src = `images/hangman/hangman-0${guesses}-${imageNumber%3}.png`;
+        
+    }, 150);
 }
 
 //Create Hint
