@@ -64,8 +64,8 @@ function guess(letter) {
         }
     }
     // console.log(`${correctGuesses} ${word.length}`);
-    // if(correctGuesses == word.length()) gameOver("YOU WIN");
     if(guessedWrong) hangman();
+    if(correctGuesses == word.length()) gameOver("YOU WIN");
 }
 
 //Create hang animation
