@@ -100,7 +100,7 @@ function addButton(letter) {
     element.setAttribute("value", letter);
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
-    element.setAttribute("onclick", "guess(this.textContent); console.log(this.setAttribute('disabled', 'disabled'))");
+    element.setAttribute("onclick", "guess(this.textContent); this.setAttribute('disabled', 'disabled'); this.hidden = true;");
     //Append the element in page (in span).
     buttons.appendChild(element);
 }
