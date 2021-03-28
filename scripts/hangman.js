@@ -11,6 +11,7 @@ let guesses = 0;
 let hangmanImage = document.getElementById("hangman-image");
 let blanks = document.getElementById("blanks");
 let buttons = document.getElementById("alphabet");
+let guessed = document.getElementById("guesses");
 
 
 fetch("json/words.json").then(function( response ){
@@ -37,6 +38,7 @@ function createGame() {
     token = getRandomInt(numberOfWords);
     word = words[token]["word"].toUpperCase();
     hint = words[token]["hint"];
+    guessed.innerHTML = `<p><strong>Guesses: </strong>0/7</p>`;
     buttons.innerHTML = "";
 
     for (let i = 1; i <= 26; i++) {
@@ -66,10 +68,10 @@ function hangman() {
     guesses++;
     clearInterval(imagehandler);
     if (guesses < 8) {
-        document.getElementById("guesses").innerHTML = `<p><strong>Guesses: </strong>${guesses}/7</p>`;
+        guessed.innerHTML = `<p><strong>Guesses: </strong>${guesses}/7</p>`;
         if (guesses == 7) {
             setTimeout(() => {
-                clearInterval(imagehandler);
+                gameOver();
             }, 2000);
         }
         imagehandler = setInterval(() => {
@@ -78,6 +80,12 @@ function hangman() {
             
         }, 150);
     }
+}
+
+function gameOver() {
+    clearInterval(imagehandler);
+    
+    guessed.innerHTML = "<p><strong>GAME OVER</strong></p>"
 }
 
 //Create Hint
