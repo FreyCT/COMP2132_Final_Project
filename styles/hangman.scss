@@ -15,6 +15,10 @@ div{
 	color:var(--primary-color);
 	margin: 5px;
 	text-align: center;
+
+	button:hover {
+		@include borderSet(15px, groove, var(--secondary-color), var(--tertiary-color));
+	}
 }
 
 button {
@@ -22,16 +26,7 @@ button {
 	margin: 5px;
 	width: 30px;
 	height: 30px;
-	@include borderSet(15px, groove, var(--primary-color), var(--secondary-color));
-	border-radius: 15px;
-	border-style:groove;
-	border-color: var(--primary-color);
-	background-color:var(--secondary-color);
- 	
-
-	:hover {
-		@include borderSet(15px, groove, var(--secondary-color), var(--tertiary-color));
-	}
+	@include borderSet(15px, solid, var(--primary-color), var(--secondary-color));
 }
 
 h3{
@@ -40,7 +35,7 @@ h3{
 
 #hangman-image{
 	height: 650px;
-	@include borderSet(10px, solid, var(--tertiary-color), var(--secondary-color));
+	@include borderSet(10px, groove, var(--tertiary-color), var(--secondary-color));
 }
 
 .stage{
