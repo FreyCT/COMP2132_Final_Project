@@ -68,6 +68,11 @@ function hangman() {
     clearInterval(imagehandler);
     if (guesses < 8) {
         document.getElementById("guesses").innerHTML = `<p><strong>Guesses: </strong>${guesses}/7</p>`;
+        if (guesses == 7) {
+            setTimeout(() => {
+                clearInterval(imagehandler);
+            }, 2000);
+        }
         imagehandler = setInterval(() => {
             imageNumber++;
             hangmanImage.src = `images/hangman/hangman-0${guesses}-${imageNumber%3}.png`;
