@@ -24,8 +24,7 @@ fetch("json/words.json").then(function( response ){
 .then(function(data){                 
     words = data;
     numberOfWords = words.length;
-    createGame();
-})
+}).then(createGame())
 .catch(function(){
     console.log("fetch error");
 });
@@ -42,7 +41,7 @@ function createGame() {
     for (let i = 1; i <= 26; i++) {
         addButton(String.fromCharCode(64 + i))
     }
-    
+
     //Call function to display spaces for word
     createBlanks();
     //Call function to display hint for word
@@ -51,16 +50,12 @@ function createGame() {
 //Create guess tracker
 function guess(letter) {
     let guessedWrong = true;
-    console.log(blanks.childElementCount);
     for(let i in word) {
-        console.log(`hello ${i} ${word} ${word[i]} ${letter}`);
         if(word[i] == letter) {
-            console.log("matched")
             document.getElementById(`B${i}`).innerHTML = letter;
             guessedWrong = false;
         }
     }
-
     if(guessedWrong) hangman();
 }
 
