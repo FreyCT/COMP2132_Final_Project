@@ -20,6 +20,10 @@ button {
   border-radius: 15px;
 }
 
+button :hover {
+  color: var(--tertiary-color);
+}
+
 h3 {
   margin: 10px;
 }
