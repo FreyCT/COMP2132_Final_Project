@@ -43,19 +43,24 @@ function createGame() {
 
 //Create guess tracker
 function guess(letter) {
-    let flag = true;
+    let guessedWrong = true;
     console.log(blanks.childElementCount);
     for(let i in word) {
         console.log(`hello ${i} ${word} ${word[i]} ${letter}`);
         if(word[i] == letter) {
             console.log("matched")
             document.getElementById(`B${i}`).innerHTML = letter;
-            flag = false;
+            guessedWrong = false;
         }
     }
+
+    if(guessedWrong) hangman();
 }
 
 //Create hang animation
+function hangman() {
+    
+}
 
 //Create Hint
 function createHint() {
