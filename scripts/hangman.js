@@ -84,6 +84,7 @@ function hangman() {
 function gameOver() {
     clearInterval(imagehandler);
     document.getElementById("hint").innerHTML = "";
+    blanks.innerHTML = "";
     guessed.innerHTML = "<p><strong>GAME OVER</strong></p>"
     document.getElementById("hint").innerHTML = `<P onclick = "createGame()"><strong>PLAY AGAIN</strong></p>`;
     buttons.innerHTML = "";
