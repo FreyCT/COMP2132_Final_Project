@@ -4,6 +4,7 @@ let words;
 let token;
 let word;
 let hint;
+let correctGuesses;
 let numberOfWords;
 let imagehandler;
 let imageNumber = 0;
@@ -40,6 +41,7 @@ function createGame() {
     hint = words[token]["hint"];
     guessed.innerHTML = `<p><strong>Guesses: </strong>0/7</p>`;
     buttons.innerHTML = "";
+    correctGuesses = 0;
 
     for (let i = 1; i <= 26; i++) {
         addButton(String.fromCharCode(64 + i));
@@ -57,9 +59,11 @@ function guess(letter) {
     for(let i in word) {
         if(word[i] == letter) {
             document.getElementById(`B${i}`).innerHTML = letter;
+            correctGuesses++;
             guessedWrong = false;
         }
     }
+    if(correctGuesses == word.length()) gameOver("YOU WIN");
     if(guessedWrong) hangman();
 }
 
@@ -81,11 +85,11 @@ function hangman() {
     }
 }
 
-function gameOver() {
+function gameOver(message) {
     clearInterval(imagehandler);
     document.getElementById("hint").innerHTML = "";
     blanks.innerHTML = "";
-    guessed.innerHTML = "<p><strong>GAME OVER</strong></p>"
+    guessed.innerHTML = `<p><strong>${message}</strong></p>`;
     document.getElementById("hint").innerHTML = `<P onclick = "createGame()"><strong>PLAY AGAIN</strong></p>`;
     buttons.innerHTML = "";
 }
