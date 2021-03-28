@@ -9,7 +9,7 @@ let correctGuesses;
 let numberOfWords;
 let imagehandler;
 let imageNumber = 0;
-let guesses = 0;
+let incorrectGuesses = 0;
 let hangmanImage = document.getElementById("hangman-image");
 let blanks = document.getElementById("blanks");
 let buttons = document.getElementById("alphabet");
@@ -71,18 +71,18 @@ function guess(letter) {
 
 //Create hang animation
 function hangman() {
-    guesses++;
+    incorrectGuesses++;
     clearInterval(imagehandler);
-    if (guesses < 8) {
-        guessed.innerHTML = `<p><strong>Guesses: </strong>${guesses}/7</p>`;
-        if (guesses == 7) {
+    if (incorrectGuesses < 8) {
+        guessed.innerHTML = `<p><strong>Guesses: </strong>${incorrectGuesses}/7</p>`;
+        if (incorrectGuesses == 7) {
             setTimeout(() => {
                 gameOver("YOU LOSE");
             }, 2000);
         }
         imagehandler = setInterval(() => {
             imageNumber++;
-            hangmanImage.src = `images/hangman/hangman-0${guesses}-${imageNumber%3}.png`;
+            hangmanImage.src = `images/hangman/hangman-0${incorrectGuesses}-${imageNumber%3}.png`;
         }, 150);
     }
 }
