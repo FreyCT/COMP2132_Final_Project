@@ -1,16 +1,22 @@
+:root {
+  --primary-color: white;
+  --secondary-color: black;
+  --tertiary-color: pink;
+}
+
 div {
-  color: white;
+  color: var(--primary-color);
   margin: 5px;
   text-align: center;
 }
 
 button {
-  color: white;
+  color: var(--primary-color);
   margin: 5px;
-  background-color: black;
+  background-color: var(--secondary-color);
   width: 30px;
   height: 30px;
-  border-color: powderblue;
+  border-color: var(--primary-color);
   border-radius: 15px;
 }
 
@@ -22,7 +28,7 @@ h3 {
   height: 650px;
   border-radius: 10px;
   border-style: solid;
-  border-color: #436350;
+  border-color: var(--tertiary-color);
 }
 
 .stage {
@@ -30,7 +36,8 @@ h3 {
 }
 
 #hint p strong:hover {
-  color: pink;
+  color: var(--tertiary-color);
+  cursor: pointer;
 }
 
 #wordDisplay {

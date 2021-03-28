@@ -1,17 +1,28 @@
+:root{
+	--primary-color: white;
+	--secondary-color: black;
+	--tertiary-color: pink;
+}
+
+@mixin borderSet($radius, $style, $color) {
+	border-radius: $radius;
+	border-style: $style;
+	border-color: $color;
+}
 
 div{
-	color:white;
+	color:var(--primary-color);
 	margin: 5px;
 	text-align: center;
 }
 
 button {
-	color: white;
+	color: var(--primary-color);
 	margin: 5px;
-	background-color:black;
+	background-color:var(--secondary-color);
 	width: 30px;
 	height: 30px;
-	border-color:powderblue;
+	border-color: var(--primary-color);
  	border-radius: 15px;
 }
 
@@ -21,9 +32,7 @@ h3{
 
 #hangman-image{
 	height: 650px;
-	border-radius: 10px;
-	border-style: solid;
-	border-color: rgb(67, 99, 80);
+	@include borderSet(10px, solid, var(--tertiary-color));
 }
 
 .stage{
@@ -33,7 +42,8 @@ h3{
 #hint {
 	p {
 		strong:hover{
-			color: pink;
+			color: var(--tertiary-color);
+			cursor: pointer;
 		}
 	}
 }
