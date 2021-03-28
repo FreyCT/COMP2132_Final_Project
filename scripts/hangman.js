@@ -8,12 +8,12 @@ let hint;
 let correctGuesses;
 let numberOfWords;
 let imagehandler;
-let imageNumber = 0;
-let incorrectGuesses = 0;
-let hangmanImage = document.getElementById("hangman-image");
-let blanks = document.getElementById("blanks");
-let buttons = document.getElementById("alphabet");
-let guessed = document.getElementById("guesses");
+let imageNumber             = 0;
+let incorrectGuesses        = 0;
+let hangmanImage            = document.getElementById("hangman-image");
+let wordDisplay             = document.getElementById("wordDisplay");
+let buttonsDisplay          = document.getElementById("alphabet");
+let incorrectGuessDisplay   = document.getElementById("guesses");
 
 
 fetch("json/words.json").then(function( response ){
@@ -41,8 +41,8 @@ function createGame() {
     word = words[token]["word"].toUpperCase();
     wordLength = word.length;
     hint = words[token]["hint"];
-    guessed.innerHTML = `<p><strong>Guesses: </strong>0/7</p>`;
-    buttons.innerHTML = "";
+    incorrectGuessDisplay.innerHTML = `<p><strong>Guesses: </strong>0/7</p>`;
+    buttonsDisplay.innerHTML = "";
     correctGuesses = 0;
     incorrectGuesses = 0;
 
@@ -75,7 +75,7 @@ function hangman() {
     incorrectGuesses++;
     clearInterval(imagehandler);
     if (incorrectGuesses < 8) {
-        guessed.innerHTML = `<p><strong>Guesses: </strong>${incorrectGuesses}/7</p>`;
+        incorrectGuessDisplay.innerHTML = `<p><strong>Guesses: </strong>${incorrectGuesses}/7</p>`;
         if (incorrectGuesses == 7) {
             setTimeout(() => {
                 gameOver("YOU LOSE");
@@ -91,10 +91,10 @@ function hangman() {
 function gameOver(message) {
     clearInterval(imagehandler);
     document.getElementById("hint").innerHTML = "";
-    blanks.innerHTML = "";
-    guessed.innerHTML = `<p><strong>${message}</strong></p>`;
+    wordDisplay.innerHTML = "";
+    incorrectGuessDisplay.innerHTML = `<p><strong>${message}</strong></p>`;
     document.getElementById("hint").innerHTML = `<P onclick = "createGame()"><strong>PLAY AGAIN</strong></p>`;
-    buttons.innerHTML = "";
+    buttonsDisplay.innerHTML = "";
 }
 
 //Create Hint
@@ -109,7 +109,7 @@ function createBlanks() {
         element.innerHTML = (word[i] != "-") ? "_" : "-";
         element.setAttribute("id", `B${i}`);
         element.setAttribute("name", word[i]);
-        blanks.appendChild(element);
+        wordDisplay.appendChild(element);
         console.log(word[i]);
     }
 }
@@ -126,7 +126,7 @@ function addButton(letter) {
     element.setAttribute("name", letter);
     element.setAttribute("onclick", "guess(this.textContent); this.hidden = true;");
     //Append the element in page (in span).
-    buttons.appendChild(element);
+    buttonsDisplay.appendChild(element);
 }
 
 function getRandomInt(max) {
