@@ -63,8 +63,8 @@ function guess(letter) {
             guessedWrong = false;
         }
     }
-    console.log(`${correctGuesses} ${word.length}`);
-    if(correctGuesses == word.length()) gameOver("YOU WIN");
+    // console.log(`${correctGuesses} ${word.length}`);
+    // if(correctGuesses == word.length()) gameOver("YOU WIN");
     if(guessedWrong) hangman();
 }
 
