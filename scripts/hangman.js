@@ -37,7 +37,6 @@ function createGame() {
     token = getRandomInt(numberOfWords);
     word = words[token]["word"].toUpperCase();
     hint = words[token]["hint"];
-
     buttons.innerHTML = "";
 
     for (let i = 1; i <= 26; i++) {
