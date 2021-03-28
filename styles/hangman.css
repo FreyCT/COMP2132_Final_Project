@@ -1,6 +1,7 @@
 div {
   color: white;
   margin: 5px;
+  border: 1px solid grey;
   text-align: center;
 }
 
