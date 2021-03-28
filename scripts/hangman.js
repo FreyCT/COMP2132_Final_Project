@@ -42,7 +42,7 @@ function createGame() {
     buttons.innerHTML = "";
 
     for (let i = 1; i <= 26; i++) {
-        addButton(String.fromCharCode(64 + i))
+        addButton(String.fromCharCode(64 + i));
     }
 
     //Call function to display spaces for word
@@ -84,7 +84,7 @@ function hangman() {
 
 function gameOver() {
     clearInterval(imagehandler);
-    
+    document.getElementById("hint").innerHTML = "";
     guessed.innerHTML = "<p><strong>GAME OVER</strong></p>"
 }
 
