@@ -13,15 +13,23 @@ div {
 button {
   color: var(--primary-color);
   margin: 5px;
-  background-color: var(--secondary-color);
   width: 30px;
   height: 30px;
-  border-color: var(--primary-color);
   border-radius: 15px;
+  border-style: groove;
+  border-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-radius: 15px;
+  border-style: groove;
+  border-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 button :hover {
-  color: var(--tertiary-color);
+  border-radius: 15px;
+  border-style: groove;
+  border-color: var(--secondary-color);
+  background-color: var(--tertiary-color);
 }
 
 h3 {
@@ -33,6 +41,7 @@ h3 {
   border-radius: 10px;
   border-style: solid;
   border-color: var(--tertiary-color);
+  background-color: var(--secondary-color);
 }
 
 .stage {
