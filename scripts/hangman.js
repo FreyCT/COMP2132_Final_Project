@@ -3,6 +3,7 @@ document.body.style.backgroundImage = "url('images/hangman/black.jpg')";
 let words;
 let token;
 let word;
+let wordLength;
 let hint;
 let correctGuesses;
 let numberOfWords;
@@ -38,6 +39,7 @@ function createGame() {
     hangmanImage.src = "images/hangman/hangman.png";
     token = getRandomInt(numberOfWords);
     word = words[token]["word"].toUpperCase();
+    wordLength = word.length;
     hint = words[token]["hint"];
     guessed.innerHTML = `<p><strong>Guesses: </strong>0/7</p>`;
     buttons.innerHTML = "";
@@ -63,7 +65,8 @@ function guess(letter) {
             guessedWrong = false;
         }
     }
-    if(correctGuesses == word.length) gameOver("YOU WIN");
+    console.log(correctGuesses == wordLength);
+    if(correctGuesses == wordLength) gameOver("YOU WIN");
     if(guessedWrong) hangman();
 }
 
