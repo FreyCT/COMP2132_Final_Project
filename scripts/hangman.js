@@ -47,6 +47,7 @@ function createGame() {
     //Call function to display spaces for word
     createBlanks();
     //Call function to display hint for word
+    createHint();
 }
 
 //Create guess tracker
