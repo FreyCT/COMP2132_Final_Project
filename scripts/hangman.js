@@ -2,7 +2,7 @@ document.body.style.backgroundImage = "url('images/hangman/black.jpg')";
 
 let words;
 let token;
-let word = "AT";
+let word;
 let hint;
 let numberOfWords;
 let blanks = document.getElementById("blanks");
@@ -33,7 +33,7 @@ for (let i = 1; i <= 26; i++) {
 //Create Game
 function createGame() {
     token = getRandomInt(numberOfWords);
-    word = words[token]["word"].toUpperCase;
+    word = words[token]["word"].toUpperCase();
     hint = words[token]["hint"];
 
     //Call function to display spaces for word
