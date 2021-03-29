@@ -149,7 +149,7 @@ function checkPoints(){
     let emptyPoints = numberOfPoints.length
     for (i = 0; i<numberOfPoints.length; i++){
         if("points" != numberOfPoints[i].innerHTML){
-            emptyPoints -= 1
+            emptyPoints --
         }
     }
 
@@ -165,17 +165,17 @@ function checkPoints(){
 function announceWinner(){
     setTimeout(() => {
         if(totalPlayerScore.innerHTML > totalComputerScore.innerHTML){
-            if(window.confirm("You won, would you like to play again?")){
+            if(window.confirm("You won! \n would you like to play again?")){
                 location.reload();
             }
         }
         if(totalPlayerScore.innerHTML < totalComputerScore.innerHTML){
-            if(window.confirm("You lost, would you like to play again?")){
+            if(window.confirm("You lost... \n would you like to play again?")){
                 location.reload();
             }
         }
         if(totalPlayerScore.innerHTML == totalComputerScore.innerHTML){
-            if(window.confirm("You tied, would you like to play again?")){
+            if(window.confirm("You tied. \n would you like to play again?")){
                 location.reload();
             }
         }
