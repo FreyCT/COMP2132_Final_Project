@@ -41,7 +41,7 @@ table .blank {
   display: grid;
   grid-template-rows: minmax(360px, auto) minmax(10px, auto);
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "player-dice computer-dice score-tally" "roll-dice roll-dice score-tally";
+  grid-template-areas: "player-dice computer-dice score-tally" "player-dice-result computer-dice-result score-tally" "roll-dice roll-dice restart";
   grid-gap: 8px;
 }
 
@@ -74,6 +74,23 @@ table .blank {
 }
 
 #overall-dice-game .roll-dice:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+#overall-dice-game .player-dice-result {
+  grid-area: player-dice-result;
+}
+
+#overall-dice-game .computer-dice-result {
+  grid-area: computer-dice-result;
+}
+
+#overall-dice-game .restart {
+  grid-area: restart;
+}
+
+#overall-dice-game .restart:hover {
   background-color: var(--secondary-color);
   color: var(--primary-color);
 }

@@ -15,7 +15,13 @@
 			<main>
 				<div class="banner">
 					<img src="images/banner-image.jpg" alt="">
-					<h2>Dice Game</h2>
+                    <h2>Dice Game</h2>
+                    <h4>Game Description:
+                        <br>There are 3 rounds in total. Each round will collect 2 dice rolls for the player and computer
+                        <br>Roll Dice: Click to roll your dice. Computer will roll dice immediately after
+                        <br>Point system: The two dice rolls in each round will be summed for total points. Same dice equals to double points
+                        <br>Beware of 1! If 1 is ever rolled for either the player or computer, the round total will autmoatically equate to 0!
+                    </h4>
                 </div>	
                 
                 <div id="overall-dice-game">
@@ -87,12 +93,15 @@
                             </tr>
                             <tr>
                                 <td>total score</td>
-                                <td class = "totalPlayerScore">Total</td>
-                                <td class = "totalComputerScore">Total</td>
+                                <td id="totalPlayerScore">Total</td>
+                                <td id="totalComputerScore">Total</td>
                             </tr>
                         </table>
                     </section>
-                    <section class="roll-dice box" id="btn-roll"><p>Roll Dice</p></li></section>
+                    <section class="roll-dice box" id="btn-roll"><p>Roll Dice</p></section>
+                    <section class="player-dice-result box"><p class="dice-result">Dice Result</p></section>
+                    <section class="computer-dice-result box"><p class="dice-result">Dice Result</p></section>
+                    <section class="restart box" id="btn-restart"><p>Restart</p></section>
                 </div>
 			</main>
 			<footer>

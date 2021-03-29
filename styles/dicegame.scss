@@ -47,7 +47,8 @@ table{
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-areas:
 	"player-dice computer-dice score-tally"
-	"roll-dice roll-dice score-tally";
+	"player-dice-result computer-dice-result score-tally"
+	"roll-dice roll-dice restart";
 	grid-gap: 8px;
 	.dice-image{
 		width: 250px;
@@ -68,6 +69,16 @@ table{
 	.score-tally{ grid-area: score-tally; }
 	.roll-dice{ grid-area: roll-dice; }
 	.roll-dice:hover{
+		background-color: var(--secondary-color);
+		color: var(--primary-color);
+	}
+	.player-dice-result{ grid-area: player-dice-result; }
+	.computer-dice-result{ grid-area: computer-dice-result; }
+
+	.restart{
+		grid-area: restart;
+	}
+	.restart:hover{
 		background-color: var(--secondary-color);
 		color: var(--primary-color);
 	}

@@ -2,6 +2,12 @@ h2 {
   text-align: center;
 }
 
+h4 {
+  margin-left: 55px;
+  font-weight: lighter;
+  line-height: 20px;
+}
+
 body {
   background: #191B1C;
   color: white;
