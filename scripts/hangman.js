@@ -48,7 +48,7 @@ class HangmanGame{
         //Generate blanks for wordDisplay
         for(let i in this.word) {
             let element = document.createElement("h3");
-            if (this.word[i] != "-") this.wordLength--;
+            if (this.word[i] == "-") this.wordLength--;
             element.innerHTML = (this.word[i] != "-") ? "_" : "-";
             element.setAttribute("id", `B${i}`);
             wordDisplay.appendChild(element);
