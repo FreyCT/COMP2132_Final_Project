@@ -45,11 +45,11 @@ h3{
 #hint {
 	p {
 		strong{
-			@include borderSet(15px, solid, var(--primary-color), var(--secondary-color));
+			@include borderSet(10px, solid, var(--primary-color), var(--secondary-color));
 		}
 
 		strong:hover{
-			@include borderSet(15px, solid, var(--tertiary-color), var(--secondary-color));
+			@include borderSet(10px, solid, var(--tertiary-color), var(--secondary-color));
 			color: var(--tertiary-color);
 			cursor: pointer;
 		}

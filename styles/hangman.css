@@ -45,14 +45,14 @@ h3 {
 }
 
 #hint p strong {
-  border-radius: 15px;
+  border-radius: 10px;
   border-style: solid;
   border-color: var(--primary-color);
   background-color: var(--secondary-color);
 }
 
 #hint p strong:hover {
-  border-radius: 15px;
+  border-radius: 10px;
   border-style: solid;
   border-color: var(--tertiary-color);
   background-color: var(--secondary-color);
