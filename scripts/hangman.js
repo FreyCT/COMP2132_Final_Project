@@ -101,12 +101,7 @@ function addButton(letter) {
     element.setAttribute("value", letter);
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
-    element.addEventListener("click", e => {
-        
-        e.hidden = true;
-        guess(e.textContent);
-    })
-    // element.setAttribute("onclick", "guess(this.textContent); this.hidden = true;");
+    element.setAttribute("onclick", "guess(this.textContent); this.hidden = true;");
     //Append the element in page (in span).
     buttonsDisplay.appendChild(element);
 }
@@ -139,13 +134,13 @@ function createGame() {
 }
 
 
-// class HangmanGame{
+class HangmanGame{
     
-//     constructor(){
-//         this.word = words[token]["word"].toUpperCase();
-//         this.value02 = param02;
-//         this.value03 = "Default";  
-//     }
-//     //additional functions 
-//     functionName(){ }
-// }
+    constructor(){
+        this.word = words[token]["word"].toUpperCase();
+        this.value02 = param02;
+        this.value03 = "Default";  
+    }
+    //additional functions 
+    functionName(){ }
+}
