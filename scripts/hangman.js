@@ -34,7 +34,10 @@ fetch("json/words.json").then(function( response ){
 });
 
 //Create guess tracker
-function guess(letter) {
+function guess(element) {
+    let letter = element.textContent;
+    element.disabled = true;
+    element.hidden = true;
     let guessedWrong = true;
     for(let i in word) {
         if(word[i] == letter) {
@@ -101,7 +104,7 @@ function addButton(letter) {
     element.setAttribute("value", letter);
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
-    element.setAttribute("onclick", "guess(this.textContent); this.hidden = true;");
+    element.setAttribute("onclick", "guess(this)");
     //Append the element in page (in span).
     buttonsDisplay.appendChild(element);
 }
