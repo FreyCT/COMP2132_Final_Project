@@ -90,7 +90,7 @@ class HangmanGame{
 
     draw() {
         // clearInterval(imagehandler);
-        if (this.incorrectGuesses < 8) {
+        if (this.incorrectGuesses < 7) {
             this.incorrectGuesses++;
             guessDisplay.innerHTML = `<p><strong>Guesses: </strong>${this.incorrectGuesses}/7</p>`;
             if (this.incorrectGuesses == 7) {
