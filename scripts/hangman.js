@@ -98,7 +98,7 @@ class HangmanGame{
                     this.gameOver("YOU LOSE");
                 }, 2000);
             }
-            if(this.incorrectGuesses < 1) imagehandler = setInterval(() => {
+            if(this.incorrectGuesses <= 1) imagehandler = setInterval(() => {
                 imageNumber++;
                 hangmanImage.src = `images/hangman/hangman-0${this.incorrectGuesses}-${imageNumber%3}.png`;
             }, 150);
