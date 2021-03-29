@@ -46,7 +46,7 @@ class HangmanGame{
         
         //Adds alphabet of buttons
         for (let i = 1; i <= 26; i++) {
-            addButton(String.fromCharCode(64 + i));
+            this.addButton(String.fromCharCode(64 + i));
         }
     
         //create blanks
@@ -89,8 +89,8 @@ class HangmanGame{
                 guessedWrong = false;
             }
         }
-        if(this.correctGuesses == this.wordLength) gameOver("YOU WIN");
-        if(guessedWrong) draw();
+        if(this.correctGuesses == this.wordLength) this.gameOver("YOU WIN");
+        if(guessedWrong) this.draw();
     }
 
     draw() {
@@ -100,7 +100,7 @@ class HangmanGame{
             guessDisplay.innerHTML = `<p><strong>Guesses: </strong>${this.incorrectGuesses}/7</p>`;
             if (this.incorrectGuesses == 7) {
                 setTimeout(() => {
-                    gameOver("YOU LOSE");
+                    this.gameOver("YOU LOSE");
                 }, 2000);
             }
             imagehandler = setInterval(() => {
