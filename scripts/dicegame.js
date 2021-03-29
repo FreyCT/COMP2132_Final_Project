@@ -73,7 +73,7 @@ rollDice.addEventListener('click', function(){
             $(".points").eq(roundNumber).text(result)
         }
         
-    }, 500);
+    }, 10);
 
 
 });
@@ -115,12 +115,30 @@ function computerRoll(){
             roundNumber += 2
         }
         checkPoints()
-    }, 500);
+    }, 10);
 
     
 
 };
 
+
+class totalPoints{
+    constructor(round1, round2, round3){
+        this.round1 = round1
+        this.round2 = round2
+        this.round3 = round3
+    }
+    player(){
+        return parseInt($(".points").eq(this.round1-1).text())
+                + parseInt($(".points").eq(this.round2).text())
+                + parseInt($(".points").eq(this.round3+1).text())
+    }
+    computer(){
+        return parseInt($(".points").eq(this.round1).text())
+                + parseInt($(".points").eq(this.round2+1).text())
+                + parseInt($(".points").eq(this.round3+2).text())
+    }
+}
 
 
 let numberOfPoints = document.getElementsByClassName("points")
@@ -136,8 +154,8 @@ function checkPoints(){
     }
 
     if(emptyPoints == 0){
-        totalPlayerScore.innerHTML = parseInt($(".points").eq(0).text()) + parseInt($(".points").eq(2).text()) + parseInt($(".points").eq(4).text())
-        totalComputerScore.innerHTML = parseInt($(".points").eq(1).text()) + parseInt($(".points").eq(3).text()) + parseInt($(".points").eq(5).text())
+        totalPlayerScore.innerHTML = new totalPoints(1, 2, 3).player();
+        totalComputerScore.innerHTML = new totalPoints(1, 2, 3).computer();
         rollDice.style.display = 'none'
         announceWinner()
     }

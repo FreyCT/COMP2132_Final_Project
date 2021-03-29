@@ -19,14 +19,17 @@ section #player-dice-title, section #computer-dice-title {
 }
 
 table {
-  width: 95%;
+  border: 1px solid var(--tertiary-color);
   margin: auto;
+  text-align: center;
+  width: 95%;
 }
 
 table th, table td {
   border: 1px solid var(--tertiary-color);
-  padding: 5px;
   margin: auto;
+  text-align: center;
+  padding: 5px;
 }
 
 table .blank {
@@ -35,9 +38,9 @@ table .blank {
 
 #overall-dice-game {
   border: 1px solid var(--tertiary-color);
+  margin: auto;
   text-align: center;
   max-width: 90%;
-  margin: auto;
   display: grid;
   grid-template-rows: minmax(360px, auto) minmax(10px, auto);
   grid-template-columns: 1fr 1fr 1fr;
@@ -56,26 +59,17 @@ table .blank {
 }
 
 #overall-dice-game .player-dice {
-  background-color: var(--secondary-color);
   grid-area: player-dice;
+  background-color: var(--secondary-color);
 }
 
 #overall-dice-game .computer-dice {
-  background-color: var(--secondary-color);
   grid-area: computer-dice;
+  background-color: var(--secondary-color);
 }
 
 #overall-dice-game .score-tally {
   grid-area: score-tally;
-}
-
-#overall-dice-game .roll-dice {
-  grid-area: roll-dice;
-}
-
-#overall-dice-game .roll-dice:hover {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
 }
 
 #overall-dice-game .player-dice-result {
@@ -86,8 +80,17 @@ table .blank {
   grid-area: computer-dice-result;
 }
 
+#overall-dice-game .roll-dice {
+  grid-area: roll-dice;
+}
+
 #overall-dice-game .restart {
   grid-area: restart;
+}
+
+#overall-dice-game .roll-dice:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }
 
 #overall-dice-game .restart:hover {

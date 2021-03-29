@@ -5,6 +5,18 @@
 	--tertiary-color: grey;
 }
 
+@mixin grey_border_margin_auto{
+	border: 1px solid var(--tertiary-color);
+	margin: auto;
+	text-align: center;
+}
+
+@mixin hover_buttons{
+	background-color: var(--secondary-color);
+	color: var(--primary-color);
+
+}
+
 
 
 #game a{
@@ -23,25 +35,22 @@ section{
 }
 
 table{
+	@include grey_border_margin_auto();
 	width: 95%;
-	margin: auto;
+
 	th, td{
-	border: 1px solid var(--tertiary-color);
+	@include grey_border_margin_auto();
 	padding: 5px;
-	margin: auto;
 	}
 	.blank{
 	border: 1px solid transparent;
-
 	}
 }
 
 
 #overall-dice-game{
-	border: 1px solid var(--tertiary-color);
-	text-align: center;
+	@include grey_border_margin_auto();
 	max-width: 90%;
-	margin: auto;
 	display: grid;
 	grid-template-rows: minmax(360px, auto) minmax(10px, auto);
 	grid-template-columns: 1fr 1fr 1fr;
@@ -50,6 +59,7 @@ table{
 	"player-dice-result computer-dice-result score-tally"
 	"roll-dice roll-dice restart";
 	grid-gap: 8px;
+
 	.dice-image{
 		width: 250px;
 		padding-top: 30px;
@@ -58,28 +68,19 @@ table{
 		border: 1px solid var(--tertiary-color);
 		margin: 5px;
 	}
-	.player-dice{ 
-		background-color: var(--secondary-color);
-		grid-area: player-dice; 
-	}
-	.computer-dice{ 
-		background-color: var(--secondary-color);
-		grid-area: computer-dice; 
-	}
-	.score-tally{ grid-area: score-tally; }
-	.roll-dice{ grid-area: roll-dice; }
-	.roll-dice:hover{
-		background-color: var(--secondary-color);
-		color: var(--primary-color);
-	}
-	.player-dice-result{ grid-area: player-dice-result; }
-	.computer-dice-result{ grid-area: computer-dice-result; }
 
-	.restart{
-		grid-area: restart;
+	.player-dice{ 	grid-area: player-dice;		background-color: var(--secondary-color);}
+	.computer-dice{ grid-area: computer-dice; 	background-color: var(--secondary-color);}
+	.score-tally{ 	grid-area: score-tally; }
+	.player-dice-result{ 	grid-area: player-dice-result; }
+	.computer-dice-result{ 	grid-area: computer-dice-result; }
+
+	.roll-dice{ grid-area: roll-dice; }
+	.restart{ 	grid-area: restart; }
+	.roll-dice:hover{
+		@include hover_buttons();
 	}
 	.restart:hover{
-		background-color: var(--secondary-color);
-		color: var(--primary-color);
+		@include hover_buttons();
 	}
 }
