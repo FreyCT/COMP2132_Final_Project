@@ -41,7 +41,7 @@ ul li a {
 }
 
 ul li a:hover {
-  background: #2FA2C4;
+  background: grey;
   border: 4px solid white;
 }
 
