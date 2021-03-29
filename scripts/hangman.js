@@ -81,7 +81,7 @@ class HangmanGame{
         for(let i in this.word) {
             if(this.word[i] == letter) {
                 document.getElementById(`B${i}`).innerHTML = letter;
-                this.correctGuesses++;
+                this.correctGuesses++;                                  //does not include "-" ' s
                 guessedWrong = false;
             }
         }
@@ -131,3 +131,10 @@ fetch("json/words.json").then(function( response ){
 }).catch(function(){
     console.log("fetch error");
 });
+
+
+/*
+Leetcode
+Javascript
+Node.js
+*/
