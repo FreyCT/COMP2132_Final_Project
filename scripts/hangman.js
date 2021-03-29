@@ -44,7 +44,8 @@ class HangmanGame{
             this.addButton(String.fromCharCode(64 + i));
         }
     
-        //create blanks
+        wordDisplay.innerHTML = "";
+        //Generate blanks for wordDisplay
         for(let i in this.word) {
             let element = document.createElement("h3");
             element.innerHTML = (this.word[i] != "-") ? "_" : "-";
@@ -108,7 +109,7 @@ class HangmanGame{
 
     gameOver(message) {
         clearInterval(imagehandler);
-        wordDisplay.innerHTML = "";
+        wordDisplay.innerHTML = this.word;
         guessDisplay.innerHTML = `<p><strong>${message}</strong></p>`;
         hintDisplay.innerHTML = `<P onclick = "newGame()"><strong>PLAY AGAIN</strong></p>`;
         buttonsDisplay.innerHTML = "";
