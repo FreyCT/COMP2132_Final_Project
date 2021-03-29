@@ -1,7 +1,6 @@
 document.body.style.backgroundImage = "url('images/hangman/black.jpg')"; 
 
 let words;
-let token;
 let word;
 let wordLength;
 let hint;
@@ -37,7 +36,7 @@ fetch("json/words.json").then(function( response ){
 //Create Game
 function createGame() {
     hangmanImage.src = "images/hangman/hangman.png";
-    token = getRandomInt(numberOfWords);
+    let token = getRandomInt(numberOfWords);
     word = words[token]["word"].toUpperCase();
     wordLength = word.length;
     hint = words[token]["hint"];
