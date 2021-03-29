@@ -33,28 +33,6 @@ fetch("json/words.json").then(function( response ){
     console.log("fetch error");
 });
 
-//Create Game
-function createGame() {
-    hangmanImage.src = "images/hangman/hangman.png";
-    let token = getRandomInt(numberOfWords);
-    word = words[token]["word"].toUpperCase();
-    wordLength = word.length;
-    hint = words[token]["hint"];
-    incorrectGuessDisplay.innerHTML = `<p><strong>Guesses: </strong>0/7</p>`;
-    buttonsDisplay.innerHTML = "";
-    correctGuesses = 0;
-    incorrectGuesses = 0;
-
-    for (let i = 1; i <= 26; i++) {
-        addButton(String.fromCharCode(64 + i));
-    }
-
-    //Call function to display spaces for word
-    createBlanks();
-    //Call function to display hint for word
-    createHint();
-}
-
 //Create guess tracker
 function guess(letter) {
     let guessedWrong = true;
@@ -123,7 +101,11 @@ function addButton(letter) {
     element.setAttribute("value", letter);
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
-    element.setAttribute("onclick", "guess(this.textContent); this.hidden = true;");
+    element.addEventListener("click", e => {
+        guess(this.textContent);
+        this.hidden = true;
+    })
+    // element.setAttribute("onclick", "guess(this.textContent); this.hidden = true;");
     //Append the element in page (in span).
     buttonsDisplay.appendChild(element);
 }
@@ -132,4 +114,37 @@ function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
 }
 
-//Revert
+
+//Create Game
+function createGame() {
+    hangmanImage.src = "images/hangman/hangman.png";
+    let token = getRandomInt(numberOfWords);
+    word = words[token]["word"].toUpperCase();
+    wordLength = word.length;
+    hint = words[token]["hint"];
+    incorrectGuessDisplay.innerHTML = `<p><strong>Guesses: </strong>0/7</p>`;
+    buttonsDisplay.innerHTML = "";
+    correctGuesses = 0;
+    incorrectGuesses = 0;
+
+    for (let i = 1; i <= 26; i++) {
+        addButton(String.fromCharCode(64 + i));
+    }
+
+    //Call function to display spaces for word
+    createBlanks();
+    //Call function to display hint for word
+    createHint();
+}
+
+
+// class HangmanGame{
+    
+//     constructor(){
+//         this.word = words[token]["word"].toUpperCase();
+//         this.value02 = param02;
+//         this.value03 = "Default";  
+//     }
+//     //additional functions 
+//     functionName(){ }
+// }
