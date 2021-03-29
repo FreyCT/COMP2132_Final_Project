@@ -102,8 +102,9 @@ function addButton(letter) {
     element.setAttribute("type", "button");
     element.setAttribute("name", letter);
     element.addEventListener("click", e => {
-        guess(this.textContent);
+        
         this.hidden = true;
+        guess(this.textContent);
     })
     // element.setAttribute("onclick", "guess(this.textContent); this.hidden = true;");
     //Append the element in page (in span).
