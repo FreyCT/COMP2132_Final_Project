@@ -71,7 +71,7 @@ class HangmanGame{
         element.setAttribute("value", char);
         element.setAttribute("type", "button");
         element.setAttribute("name", char);
-        element.setAttribute("onclick", "guess(this)");
+        element.setAttribute("onclick", "game.guess(this)");
         //Append the element in page (in span).
         buttonsDisplay.appendChild(element);
     }
