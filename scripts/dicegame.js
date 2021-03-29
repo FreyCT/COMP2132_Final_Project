@@ -73,7 +73,7 @@ rollDice.addEventListener('click', function(){
             $(".points").eq(roundNumber).text(result)
         }
         
-    }, 10);
+    }, 1000);
 
 
 });
@@ -115,7 +115,7 @@ function computerRoll(){
             roundNumber += 2
         }
         checkPoints()
-    }, 10);
+    }, 1000);
 
     
 
