@@ -11,7 +11,6 @@ let buttonsDisplay          = document.getElementById("alphabet");
 let guessDisplay            = document.getElementById("guesses");
 let hintDisplay             = document.getElementById("hint");
 
-hangmanImage.src = "images/hangman/hangman-instructions.png";
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -24,6 +23,7 @@ function newGame() {
     hint = words[token]["hint"];
     game = new HangmanGame(word, hint);
     game.setup();
+    hangmanImage.src = "images/hangman/hangman-instructions.png";
 }
 
 class HangmanGame{
@@ -131,8 +131,6 @@ fetch("json/words.json").then(function( response ){
 }).then(function(data){                 
     words = data;
     newGame();
-    // hangmanImage.src = "images/hangman/hangman-instructions.png";
-
 }).catch(function(){
     console.log("fetch error");
 });
