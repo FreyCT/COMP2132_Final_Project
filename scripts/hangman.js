@@ -130,6 +130,8 @@ fetch("json/words.json").then(function( response ){
 }).then(function(data){                 
     words = data;
     newGame();
+    hangmanImage.setAttribute("src","images/hangman/hangman-instructions.png");
+
 }).catch(function(){
     console.log("fetch error");
 });
