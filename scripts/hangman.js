@@ -23,7 +23,6 @@ function newGame() {
     hint = words[token]["hint"];
     game = new HangmanGame(word, hint);
     game.setup();
-    hangmanImage.src = "images/hangman/hangman-instructions.png";
 }
 
 class HangmanGame{
