@@ -1,9 +1,15 @@
+:root {
+  --primary-color: #191B1C;
+  --secondary-color: white;
+  --tertiary-color: grey;
+}
+
 h1 {
   padding-left: 30px;
 }
 
 h1 a:visited {
-  color: white;
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -18,8 +24,8 @@ h4 {
 }
 
 body {
-  background: #191B1C;
-  color: white;
+  background: var(--primary-color);
+  color: var(--secondary-color);
   font-family: helvetica;
 }
 
@@ -31,7 +37,7 @@ ul {
 }
 
 ul li a {
-  color: white;
+  color: var(--secondary-color);
   background: #2A2F30;
   border-radius: 40px;
   text-align: center;
@@ -41,8 +47,8 @@ ul li a {
 }
 
 ul li a:hover {
-  background: grey;
-  border: 4px solid white;
+  background: var(--tertiary-color);
+  border: 4px solid var(--secondary-color);
 }
 
 #game a {
