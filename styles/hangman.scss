@@ -38,8 +38,7 @@ h3{
 }
 
 #hangman-image{
-	width: 1000;
-	height: auto;
+	height: 650px;
 	@include borderSet(10px, groove, var(--tertiary-color), var(--secondary-color));
 }
 
@@ -47,8 +46,9 @@ h3{
 	position: relative;
 }
 
+
 #alphabet {
-	max-width: 1024px;
+	max-width: 1000px;
 }
 
 #hint {

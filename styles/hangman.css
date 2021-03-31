@@ -37,8 +37,7 @@ h3 {
 }
 
 #hangman-image {
-  width: 1000;
-  height: auto;
+  height: 650px;
   border-radius: 10px;
   border-style: groove;
   border-color: var(--tertiary-color);
@@ -50,7 +49,7 @@ h3 {
 }
 
 #alphabet {
-  max-width: 1024px;
+  max-width: 1000px;
 }
 
 #hint p strong {
