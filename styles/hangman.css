@@ -49,6 +49,10 @@ h3 {
   position: relative;
 }
 
+#alphabet {
+  max-width: 1024px;
+}
+
 #hint p strong {
   border-radius: 10px;
   border-style: solid;
