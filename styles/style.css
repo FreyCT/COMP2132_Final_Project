@@ -94,6 +94,7 @@ footer .footer-image {
 footer #footer-student {
   display: flex;
   text-align: center;
+  margin: 0px;
 }
 
 footer #footer-description {
