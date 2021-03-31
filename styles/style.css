@@ -2,7 +2,7 @@ h1 {
   padding-left: 30px;
 }
 
-h1 a:visited {
+h1 a {
   color: white;
   text-decoration: none;
   border-radius: 10px;
