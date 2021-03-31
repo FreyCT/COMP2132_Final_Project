@@ -37,7 +37,7 @@ h3 {
 }
 
 #hangman-image {
-  height: 650px;
+  height: 600px;
   border-radius: 10px;
   border-style: groove;
   border-color: var(--tertiary-color);
