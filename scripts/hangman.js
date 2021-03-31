@@ -1,7 +1,7 @@
-document.body.style.backgroundImage = "url('images/black.jpg')";
+// document.body.style.backgroundImage = "url('images/black.jpg')";
 
 
-let words;
+let words; 
 let game;
 let imagehandler;
 let imageNumber             = 0;
