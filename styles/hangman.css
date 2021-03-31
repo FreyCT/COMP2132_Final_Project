@@ -10,7 +10,7 @@ body {
 
 div {
   color: var(--primary-color);
-  margin: 5px;
+  margin: auto;
   text-align: center;
 }
 
