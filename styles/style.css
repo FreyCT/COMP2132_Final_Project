@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 h1 {
   padding-left: 30px;
 }
@@ -8,6 +16,14 @@ h1 a {
   border-radius: 10px;
   border-style: solid;
   border-color: white;
+}
+
+body {
+  margin: 0px;
+}
+
+main {
+  flex: 1;
 }
 
 h2 {
@@ -47,6 +63,29 @@ ul li a {
 
 ul li a:hover {
   background: rgba(0, 0, 0, 0.624);
+}
+
+footer {
+  background-color: #141414;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer a:visited {
+  color: white;
+}
+
+footer p {
+  margin-left: 10px;
+}
+
+footer #footer-student {
+  display: flex;
+  text-align: center;
+}
+
+footer .footer-image {
+  max-width: 75px;
 }
 
 #game a {

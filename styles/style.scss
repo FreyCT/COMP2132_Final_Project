@@ -1,3 +1,11 @@
+@charset "utf-8";
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 h1{
 	padding-left: 30px;
 
@@ -10,6 +18,15 @@ h1{
 	// background-color: $background-color;
 	}
 }
+
+body{
+    margin: 0px;
+}
+
+main{
+	flex: 1;
+}
+
 
 h2{
 	text-align: center;
@@ -47,6 +64,25 @@ ul{
 		a:hover{
 			background: rgba(0, 0, 0, 0.624);
 		}
+	}
+}
+
+footer{
+    background-color: rgb(20, 20, 20);
+    display: flex;
+	justify-content: space-between;
+	a:visited{
+		color: white;
+	}
+	p{
+		margin-left: 10px;
+	}
+	#footer-student{
+		display: flex;
+		text-align: center;
+	}
+	.footer-image{
+		max-width: 75px;
 	}
 }
 
