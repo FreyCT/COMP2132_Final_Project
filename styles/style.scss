@@ -10,12 +10,18 @@ h1{
 	padding-left: 30px;
 
 	a{
-	color: white;
-	text-decoration: none;
-	border-radius: 10px;
-	border-style: solid;
-	border-color: white;
+		color: white;
+		text-decoration: none;
+		border-radius: 10px;
+		border-style: solid;
+		border-color: white;
+		padding: 5px;
 	// background-color: $background-color;
+	}
+	a:hover{
+		color: black;
+		background-color: white;
+		opacity: 0.85;
 	}
 }
 
@@ -79,12 +85,16 @@ footer{
 	p{
 		margin-left: 10px;
 	}
+	.footer-image{
+		max-width: 75px;
+	}
 	#footer-student{
 		display: flex;
 		text-align: center;
 	}
-	.footer-image{
-		max-width: 75px;
+	#footer-description{
+		margin-left: 10px;
+		text-align: left;
 	}
 }
 

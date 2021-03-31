@@ -16,6 +16,13 @@ h1 a {
   border-radius: 10px;
   border-style: solid;
   border-color: white;
+  padding: 5px;
+}
+
+h1 a:hover {
+  color: black;
+  background-color: white;
+  opacity: 0.85;
 }
 
 body {
@@ -80,13 +87,18 @@ footer p {
   margin-left: 10px;
 }
 
+footer .footer-image {
+  max-width: 75px;
+}
+
 footer #footer-student {
   display: flex;
   text-align: center;
 }
 
-footer .footer-image {
-  max-width: 75px;
+footer #footer-description {
+  margin-left: 10px;
+  text-align: left;
 }
 
 #game a {
