@@ -4,6 +4,10 @@
   --tertiary-color: pink;
 }
 
+body {
+  background-image: url("images/hangman/black.jpg");
+}
+
 div {
   color: var(--primary-color);
   margin: 5px;

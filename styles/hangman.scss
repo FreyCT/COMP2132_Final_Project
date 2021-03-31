@@ -4,6 +4,10 @@
 	--tertiary-color: pink;
 }
 
+body {
+	background-image: url('images/hangman/black.jpg');
+}
+
 @mixin borderSet($radius, $style, $color, $background-color) {
 	border-radius: $radius;
 	border-style: $style;
