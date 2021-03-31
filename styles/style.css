@@ -36,7 +36,8 @@ ul {
 
 ul li a {
   color: white;
-  background: #2A2F30;
+  border: 4px solid  white;
+  background: #0c0c0c;
   border-radius: 40px;
   text-align: center;
   font-weight: bold;
@@ -45,8 +46,7 @@ ul li a {
 }
 
 ul li a:hover {
-  background: grey;
-  border: 4px solid  white;
+  background: rgba(0, 0, 0, 0.624);
 }
 
 #game a {
