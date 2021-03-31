@@ -39,7 +39,6 @@ h3{
 
 #hangman-image{
 	max-width: 90%;
-	// height: 600px;
 	@include borderSet(10px, groove, var(--tertiary-color), var(--secondary-color));
 }
 

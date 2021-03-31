@@ -132,10 +132,3 @@ fetch("json/words.json").then(function( response ){
 }).catch(function(){
     console.log("fetch error");
 });
-
-
-/*
-Leetcode
-Javascript
-Node.js
-*/
